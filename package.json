@@ -1,0 +1,37 @@
+{
+  "name": "stories",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "prisma generate --schema src/db/prisma/schema.prisma"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.13.3",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.4.2",
+    "@types/node": "^15.12.5",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.9",
+    "prettier": "^2.3.2",
+    "prisma": "^2.26.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.26.0",
+    "dotenv": "^10.0.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.0.0"
+  }
+}
