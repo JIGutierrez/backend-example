@@ -2,6 +2,8 @@ import * as Router from 'koa-router';
 
 export const userRouter = new Router();
 
-import { get } from './get';
+import { findOne } from './findOne';
+import { create } from './create';
 
-userRouter.get('/:id', get);
+userRouter.get('/:id', findOne);
+userRouter.post('/', create);

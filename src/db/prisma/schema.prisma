@@ -13,13 +13,18 @@ generator client {
 model User {
   id String @id @default(cuid())
   name String
+  password String
   stories Story[]
 }
 
 model Story {
   id Int @id @default(autoincrement())
-  user User @relation(fields: [userId], references: [id])
-  userId String
   content String
 
+  user User @relation(fields: [userId], references: [id])
+  userId String
+
+  parent Story? @relation("StoryParent", fields: [parentId], references: [id]) 
+  parentId Int?
+  children Story[] @relation("StoryParent")
 }
